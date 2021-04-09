@@ -8,19 +8,25 @@ main {
   margin: 0 1rem 0 1rem ;
 }
 
-.selected{
+.selectable{
+  cursor: pointer;
+}
+
+/* .selected{
   background:darkblue;
   color:whitesmoke;
   text-decoration: underline;
-}
+} */
 
-.file-list {
-  height: 100%;
+.file-list-container {
   position: relative;
   padding: 1rem;
   flex: 1;
 }
-
+.file-list{
+  overflow-x:scroll;
+  max-height:70vh;
+}
 .container {
   display: flex;
   padding-right: 1rem;
@@ -35,6 +41,38 @@ main {
   padding-right: none;
   max-height: 80vh;
   overflow: scroll;
+  display: flex;
+  background-color:white;
+}
+
+.sticky{
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.file-tag{
+  font-size:.75rem;
+  display: inline-block;
+  border: 1px solid grey;
+  padding: 2px;
+  border-radius: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 75%;
+}
+
+.file-entry{
+
+}
+
+.file-col{
+  flex:1;
+}
+
+.tag-container{
+  
 }
 
 .file-button{
@@ -84,4 +122,22 @@ border-right: 1px solid lightgray;
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
+}
+
+
+
+.file-inspector{
+  position: absolute;
+  right:0;
+  z-index:20;
+  background-color:white;
+  height:100vh ;
+  overflow: none;
+}
+
+.tag-count{
+  padding: 3px;
+  border-radius:5px;
+  color:whitesmoke;
+  background-color:navy;
 }

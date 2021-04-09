@@ -5,7 +5,7 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
  * @type { import('vite').UserConfig }
  */
 export default {
-  plugins: [reactRefresh()],
+  plugins: [],
   server: {
     hmr: {
       port: 443,
